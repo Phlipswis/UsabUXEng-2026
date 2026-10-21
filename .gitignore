@@ -1,0 +1,22 @@
+# LaTeX-Hilfsdateien – nie committen
+build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+
+# Das fertige PDF nur bei Abgabe bewusst committen (oder über Releases)
+main.pdf
+
+# Editor/OS
+.DS_Store
+*~

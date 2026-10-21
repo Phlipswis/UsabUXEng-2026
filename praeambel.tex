@@ -1,0 +1,60 @@
+% =====================================================================
+%  Präambel
+% =====================================================================
+
+% ---------- Sprache, Kodierung, einheitliche Schrift -----------------
+\usepackage[T1]{fontenc}
+\usepackage{babel}            % Sprache kommt aus der Klassenoption ngerman
+\usepackage{lmodern}          % eine Schriftfamilie für das gesamte Dokument
+\usepackage{microtype}
+\usepackage[autostyle]{csquotes} % \enquote{...} setzt korrekte „Anführungszeichen“
+
+% KOMA setzt Überschriften standardmäßig serifenlos -> auf Grundschrift umstellen,
+% damit überall dieselbe Schriftart verwendet wird.
+\setkomafont{disposition}{\normalfont\bfseries}
+\setkomafont{caption}{\normalsize}
+\setkomafont{captionlabel}{\normalsize\bfseries}
+
+% ---------- Bilder und Tabellen --------------------------------------
+\usepackage{graphicx}
+\graphicspath{{bilder/}}
+\usepackage{booktabs}         % saubere Tabellenlinien
+\usepackage{tabularx}
+\usepackage{array}
+
+% ---------- Literatur: APA 7 ----------------------------------------
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource{literatur.bib}
+\DefineBibliographyStrings{ngerman}{nodate = {o.\,J.}} % deutsch „ohne Jahr“
+
+% ---------- Links und dynamische Verweise ----------------------------
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}             % lange URLs umbrechen
+\usepackage[ngerman, noabbrev]{cleveref} % \cref{...} -> „Abbildung 1“, „Tabelle 2“ …
+
+% ---------- Hilfsbefehle ---------------------------------------------
+% Quellenangabe für nicht selbst erstellte Bilder, z.\,B. in der Bildunterschrift:
+%   \caption{Beschreibung. \bildquelle{schluessel}}
+\newcommand{\bildquelle}[1]{(Quelle: \cite{#1})}
+
+% Kennzeichnung von KI-/Automatisierungsnutzung direkt an der betroffenen Stelle:
+%   \kihinweis{Tool}{Wofür genutzt}{bib-Schlüssel}
+% Beispiel: \kihinweis{ChatGPT}{Gliederungsvorschlag, danach überarbeitet}{openai2026}
+\newcommand{\kihinweis}[3]{%
+  \footnote{KI-Nutzung: #1 -- #2 \parencite{#3}.}%
+}
+
+% Abschnitt „Beiträge“ am Ende jedes Kapitels:
+%   \begin{beitraege}
+%     Arbeitsschritt/Textteil & Verantwortlich \\
+%   \end{beitraege}
+\newenvironment{beitraege}{%
+  \section{Beiträge}
+  \noindent\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.3\linewidth}@{}}
+  \toprule
+  \textbf{Arbeitsschritt / Textanteil} & \textbf{Verantwortlich} \\
+  \midrule
+}{%
+  \bottomrule
+  \endtabularx
+}

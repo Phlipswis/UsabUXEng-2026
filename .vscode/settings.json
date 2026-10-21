@@ -1,0 +1,6 @@
+{
+  "latex-workshop.latex.outDir": "./build",
+  "latex-workshop.view.pdf.viewer": "tab",
+  "latex-workshop.latex.autoBuild.run": "onSave",
+  "ltex.language": "de-DE"
+}

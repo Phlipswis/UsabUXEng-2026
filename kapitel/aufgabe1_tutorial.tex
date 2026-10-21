@@ -1,0 +1,59 @@
+% =====================================================================
+%  Aufgabe 1 – Vorlage für ein Kapitel. Tipp: ein Satz pro Zeile,
+%  dann zeigt Git Änderungen satzweise und Konflikte werden seltener.
+% =====================================================================
+\chapter{Aufgabe 1: Titel der Aufgabe}
+\label{chap:aufgabe1}
+
+\section{Einleitung}
+\label{sec:a1-einleitung}
+
+Hier beginnt der Text zu Aufgabe~1.
+Wissenschaftliche Quellen werden im Fließtext zitiert \parencite{wilkinson2016}, ebenso Internetquellen \parencite{github-docs-repos}.
+Mit \textcite{wilkinson2016} wird der Name in den Satz eingebunden.
+
+\section{Bilder}
+
+\Cref{fig:a1-diagramm} zeigt ein selbst erstelltes Diagramm, \cref{fig:a1-fremdbild} ein übernommenes Bild.
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.6\linewidth]{beispiel-diagramm}
+  \caption{Selbst erstelltes Beispieldiagramm.}
+  \label{fig:a1-diagramm}
+\end{figure}
+
+\begin{figure}[htbp]
+  \centering
+  % Für ein fremdes Bild hier die echte Datei einbinden, z.\,B.:
+  % \includegraphics[width=0.6\linewidth]{fremdes-bild}
+  \fbox{\parbox[c][3cm][c]{0.6\linewidth}{\centering Platzhalter für ein fremdes Bild}}
+  \caption{Nicht selbst erstelltes Bild mit Quellenangabe. \bildquelle{wilkinson2016}}
+  \label{fig:a1-fremdbild}
+\end{figure}
+
+\section{Tabellen}
+
+Die Ergebnisse sind in \cref{tab:a1-ergebnisse} zusammengefasst.
+Bei Tabellen steht die Überschrift oberhalb.
+
+\begin{table}[htbp]
+  \centering
+  \caption{Beispieltabelle mit Tabellenüberschrift.}
+  \label{tab:a1-ergebnisse}
+  \begin{tabular}{lrr}
+    \toprule
+    Variante & Wert A & Wert B \\
+    \midrule
+    Eins     & 1,2    & 3,4    \\
+    Zwei     & 5,6    & 7,8    \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Kennzeichnung von KI-Nutzung}
+
+% ---------------------------------------------------------------------
+\begin{beitraege}
+  Recherche und Literaturauswahl                 & Max Mustermann \\
+\end{beitraege}

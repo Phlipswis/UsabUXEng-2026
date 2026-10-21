@@ -1,0 +1,39 @@
+% =====================================================================
+%  Hauptdatei – hier nur Titel, Autor*innen und die Kapitel einbinden.
+%  Layout und Pakete stehen in praeambel.tex.
+%  Kompilieren:  latexmk main.tex   (nutzt pdflatex + biber, siehe .latexmkrc)
+% =====================================================================
+\documentclass[
+  paper=a4,        % DIN A4
+  fontsize=10pt,   % Basis-Schriftgröße (= \normalsize)
+  ngerman,
+  parskip=half,
+  bibliography=totoc,
+  listof=totoc,
+]{scrreprt}
+
+\input{praeambel}
+
+% --------------------------- Titelangaben ----------------------------
+\title{Webanwendung Kanban-Board „tick.it“}
+\author{%
+  Tara Dethlefsen \and
+  Lara Senger \and
+  Philipp Wisser%
+}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+% Ein Kapitel = eine Aufgabe = eine Datei (weniger Merge-Konflikte)
+\include{kapitel/aufgabe1}
+%\include{kapitel/aufgabe2}
+
+\listoffigures
+\listoftables
+\printbibliography[title={Quellenverzeichnis}]
+
+\end{document}
