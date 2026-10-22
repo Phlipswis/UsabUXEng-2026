@@ -21,11 +21,16 @@
 \usepackage{booktabs}         % saubere Tabellenlinien
 \usepackage{tabularx}
 \usepackage{array}
+\usepackage[section]{placeins}   % Bilder/Tabellen bleiben in ihrem Abschnitt
 
 % ---------- Literatur: APA 7 ----------------------------------------
 \usepackage[style=apa, backend=biber]{biblatex}
 \addbibresource{literatur.bib}
-\DefineBibliographyStrings{ngerman}{nodate = {o.\,J.}} % deutsch „ohne Jahr“
+\DefineBibliographyStrings{ngerman}{
+  nodate      = {o.\,J.},% deutsch „ohne Jahr“
+  retrieved   = {Abgerufen am},% deutsch „retrieved“
+  from        = {von},% deutsch „at“
+}
 
 % ---------- Links und dynamische Verweise ----------------------------
 \usepackage[hidelinks]{hyperref}
