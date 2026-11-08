@@ -11,26 +11,35 @@
 Im Rahmen dieses Moduls möchten wir die bereits bestehende Webanwendung „tick.it“ weiterentwickeln.
 „tick.it“ ist eine Anwendung zur Aufgabenverwaltung, die auf dem Kanban-Prinzip basiert.
 Nutzende können Aufgaben erstellen, bearbeiten und löschen sowie diese zwischen verschiedene Spalten verschieben.
-Dadurch können Aufgaben übersichtlich organisiert und deren Bearbeitungsstand nachvollzogen werden.\\
+Dadurch können Aufgaben übersichtlich organisiert und deren Bearbeitungsstand nachvollzogen werden.
+
 Unsere primäre Zielgruppe sind Studierende, die ihre Aufgaben, Abgaben und persönlichen Projekte organisieren möchten.
 Gerade im Studienalltag müssen häufig mehrere Aufgaben aus unterschiedlichen Modulen gleichzeitig bearbeitet werden.
 Dabei kann es schnell unübersichtlich werden, welche Aufgaben noch offen sind, welche bereits begonnen wurden und was schon erledigt ist.
-„tick.it“ soll dabei helfen, diese Aufgaben zu strukturieren und den Überblick zu behalten.\\
+„tick.it“ soll dabei helfen, diese Aufgaben zu strukturieren und den Überblick zu behalten.
+
 Als sekundäre Zielgruppe sehen wir Privatpersonen, die beispielsweise ihre Hobbyprojekte oder Aufgaben innerhalb der Familie organisieren möchten.
-Auch hier kann eine übersichtliche Aufgabenverwaltung sinnvoll sein, um anstehende Tätigkeiten festzuhalten und den Fortschritt einzelner Aufgaben nachzuvollziehen.\\
+Auch hier kann eine übersichtliche Aufgabenverwaltung sinnvoll sein, um anstehende Tätigkeiten festzuhalten und den Fortschritt einzelner Aufgaben nachzuvollziehen.
+
 Das Projekt entstand ursprünglich im Rahmen des Moduls „Interaktive Systeme“ (WiSe25/26).
 An der Konzeption und Entwicklung waren Philipp Wisser und Tara Dethlefsen beteiligt.
-Die damalige optionale Aufgabenstellung bestand darin, eine Web-App-Idee umzusetzen und zu präsentieren.\\
+Die damalige optionale Aufgabenstellung bestand darin, eine Web-App-Idee umzusetzen und zu präsentieren.
+
 Bei „tick.it“ handelt es sich also bereits um eine implementierte Webanwendung.
 Neben der grundlegenden Aufgabenverwaltung wurden verschiedene Darstellungsmöglichkeiten wie ein Dark Mode und ein HighContrast-Mode umgesetzt.
-Welche Funktionen aktuell vollständig nutzbar sind oder wo es möglicherweise noch technische oder gestalterische Probleme bestehen, muss im weiteren Projektverlauf genauer untersucht werden.\\
+Welche Funktionen aktuell vollständig nutzbar sind oder wo es möglicherweise noch technische oder gestalterische Probleme bestehen, muss im weiteren Projektverlauf genauer untersucht werden.
+
 Im ursprünglichen Projekt lag der Schwerpunkt auf der technischen Entwicklung und Umsetzung der Anwendung.
-Eine Evaluation wurde nicht durchgeführt, daher liegen bislang auch keine konkreten Evaluationsergebnisse vor, aus denen sich Verbesserungsmöglichkeiten ableiten lassen.\\
-Im Rahmen der Weiterentwicklung möchten wir uns deshalb genauer damit beschäftigen, wie gut „tick.it“ die Anforderungen unserer Zielgruppe erfüllt und an welchen Stellen die Anwendung noch verbessert werden kann.\\
+Eine Evaluation wurde nicht durchgeführt, daher liegen bislang auch keine konkreten Evaluationsergebnisse vor, aus denen sich Verbesserungsmöglichkeiten ableiten lassen.
+
+Im Rahmen der Weiterentwicklung möchten wir uns deshalb genauer damit beschäftigen, wie gut „tick.it“ die Anforderungen unserer Zielgruppe erfüllt und an welchen Stellen die Anwendung noch verbessert werden kann.
+
 Unser Ziel ist dabei stärker auf die Bedürfnisse unserer ausgewählten Zielgruppe einzugehen.
-Besonders wichtig ist uns, dass die Anwendung eine übersichtliche Organisation verschiedener Aufgaben ermöglicht.\\
+Besonders wichtig ist uns, dass die Anwendung eine übersichtliche Organisation verschiedener Aufgaben ermöglicht.
+
 Eine zentrale Verbesserungsmöglichkeit ist die Integration von Kollaborationsfunktionen sowie einer Kategorisierung der Boards, sodass mit mehrere Personen an unterschiedlichen Themen gearbeitet werden kann.
-Welche Änderungen tatsächlich sinnvoll sind und umgesetzt werden sollen, möchten wir im weiteren Projektverlauf genauer untersuchen und festlegen.\\
+Welche Änderungen tatsächlich sinnvoll sind und umgesetzt werden sollen, möchten wir im weiteren Projektverlauf genauer untersuchen und festlegen.
+
 
 Für die Kosten-Nutzen-Betrachtung gehen wir von „tick.it“ als webbasierter Consumer-Anwendung für überwiegend private Nutzung aus. Wir rechnen mit einer Produktlebensdauer von mindestens 10 Jahren, da etablierte Kanban-Tools wie Trello seit über 15 Jahren genutzt werden. Als Erlösmodell nehmen wir an, dass die Grundfunktionen kostenlos bleiben und erweiterte Funktionen erst mit einem Abonnement für 3\,€ pro Monat freigeschaltet werden, was leicht unter der Konkurrenz liegt \parencite{atlassian-trello-pricing}.
 Zusätzlich rechnen wir mit Werbeeinnahmen, wobei wegen verbreiteter Adblocker auf Webanwendungen nur 50\,\% der Nutzenden Anzeigen sehen \parencite{munoz2026adblocker}.
@@ -41,27 +50,30 @@ Den Nutzen von UUXE sehen wir in einer längeren Nutzung, geringerer Abwanderung
 
 \section{Stand des Projektes}
 \label{sec:pt-screenshots}
-Im Folgenden zeigen wir den momentanen Stand unseres Projektes auf.\\
+Im Folgenden zeigen wir den momentanen Stand unseres Projektes auf.
+
 Eine voll-implementierte Version der Web-App kann außerdem aufgerufen werden unter \href{https://phlipswis.github.io/tick-it/}{https://phlipswis.github.io/tick-it/}.
+\cref{fig:tick_it_s1} zeigt die Standardansicht der Oberfläche von tick.it im Light Mode, \cref{fig:tick_it_s2} stellt dieselbe Ansicht im Dark Mode dar.
+In \cref{fig:tick_it_s3} ist außerdem die Erstellung einer neuen Karte im Light Mode zu sehen.
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=1.0\linewidth]{tick_it_s1.png}
-  \caption{tick.it Board \bildquelle{tick-it-page}}
+  \includegraphics[width=\linewidth]{tick_it_s1.png}
+  \caption{Board-Ansicht von tick.it im Light Mode. Screenshot der Webanwendung \bildquelle{tick-it-page}}
   \label{fig:tick_it_s1}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=1.0\linewidth]{tick_it_s2.png}
-  \caption{tick.it Board Dark Mode \bildquelle{tick-it-page}}
+  \includegraphics[width=\linewidth]{tick_it_s2.png}
+  \caption{Board-Ansicht von tick.it im Dark Mode. Screenshot der Webanwendung \bildquelle{tick-it-page}}
   \label{fig:tick_it_s2}
 \end{figure}
 
 \begin{figure}[htbp]
   \centering
-  \includegraphics[width=1.0\linewidth]{tick_it_s3.png}
-  \caption{tick.it Board Kartenerstellung \bildquelle{tick-it-page}}
+  \includegraphics[width=\linewidth]{tick_it_s3.png}
+  \caption{Erstellung einer neuen Karte in tick.it im Light Mode. Screenshot der Webanwendung \bildquelle{tick-it-page}}
   \label{fig:tick_it_s3}
 \end{figure}
 
