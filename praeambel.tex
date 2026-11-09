@@ -32,6 +32,8 @@
   retrieved   = {Abgerufen am},% deutsch „retrieved“
   from        = {von},% deutsch „at“
 }
+% etwas mehr Wortabstand erlauben, damit lange Angaben (z. B. Versionen mit Datum) nicht überstehen
+\appto{\bibsetup}{\emergencystretch=1em}
 
 % ---------- Links und dynamische Verweise ----------------------------
 \usepackage[hidelinks]{hyperref}
@@ -54,13 +56,16 @@
 %   \begin{beitraege}
 %     Arbeitsschritt/Textteil & Verantwortlich \\
 %   \end{beitraege}
+% parskip=half verlangt am Absatzende mind. 1em Freiraum -> bei einer Tabelle
+% in voller Breite lokal abschalten (sonst Overfull \hbox um 10pt).
 \newenvironment{beitraege}{%
   \section{Beiträge}
+  \setlength{\parfillskip}{0pt plus 1fil}%
   \noindent\tabularx{\linewidth}{@{}>{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}p{0.3\linewidth}@{}}
   \toprule
   \textbf{Arbeitsschritt / Textanteil} & \textbf{Verantwortlich} \\
   \midrule
 }{%
   \bottomrule
-  \endtabularx
+  \endtabularx\par
 }

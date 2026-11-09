@@ -33,8 +33,10 @@ README.md             Anleitung und Abgabe-Checkliste für die Gruppe
 ## Konventionen beim Schreiben
 
 - **Neues Kapitel** = neue Aufgabe: `kapitel/aufgabeN.tex` anlegen (Vorlage: `aufgabe1.tex`), in `main.tex` per `\include{kapitel/aufgabeN}` einbinden.
-  Kopf: `\chapter{Aufgabe N: Titel}` + `\label{chap:aufgabeN}`.
-- **Labels:** Präfix + Aufgabenkürzel, z. B. `chap:aufgabe2`, `sec:a2-methode`, `fig:a2-aufbau`, `tab:a2-ergebnisse`.
+  Kopf: `\chapter{Titel}` mit inhaltlichem Titel **ohne** „Aufgabe N“ (z. B. `\chapter{Formative Evaluation}`)
+  + `\label{chap:inhalt}` (z. B. `chap:formative_evaluation`).
+- **Labels:** Präfix (`chap:`, `sec:`, `fig:`, `tab:`) + inhaltlicher Name, **keine** Aufgabennummer,
+  z. B. `chap:projektthema`, `sec:pt-einleitung`, `fig:tick_it_s1`, `tab:themen`. Labels müssen im ganzen Dokument eindeutig sein.
 - **Verweise** nur dynamisch mit `\cref{…}` / `\Cref{…}` (Satzanfang), nie Nummern von Hand.
 - **Abbildungen:** `figure` mit `\centering`, `\includegraphics`, `\caption` **unter** dem Bild, danach `\label`.
   Nicht selbst erstellte Bilder: `\caption{… \bildquelle{bibkey}}` + Eintrag in `literatur.bib`.
@@ -69,7 +71,7 @@ Die genaue Form richtet sich nach den Folien der Lehrveranstaltung – bei Abwei
 ```latex
 \begin{beitraege}
   Recherche und Literaturauswahl   & Name \\
-  Text \cref{sec:a1-einleitung}     & Name \\
+  Text \cref{sec:pt-einleitung}     & Name \\
   \midrule
   KI/Automatisierung: Tool, Zweck \parencite{bibkey} & Name \\
 \end{beitraege}

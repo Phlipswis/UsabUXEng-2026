@@ -21,7 +21,8 @@ In Overleaf: Menü → Compiler „pdfLaTeX“; biber wird automatisch erkannt.
 ## Regeln für die Gruppe
 
 - **Verweise** immer mit `\label{...}` + `\cref{...}`, nie „Abbildung 3“ von Hand tippen.
-  Präfixe: `chap:`, `sec:`, `fig:`, `tab:` plus Kürzel der Aufgabe (z. B. `fig:a1-...`).
+  Präfixe: `chap:`, `sec:`, `fig:`, `tab:` plus inhaltlicher Name, keine Aufgabennummer (z. B. `sec:pt-einleitung`, `tab:themen`).
+  Kapitelüberschriften ohne „Aufgabe N“, nur der inhaltliche Titel.
 - **Bilder:** `\caption` unter dem Bild; fremde Bilder mit `\bildquelle{bibkey}` und Eintrag in `literatur.bib`.
 - **Tabellen:** `\caption` über der Tabelle.
 - **Internetquellen:** immer `url` **und** `urldate`; Links vor Abgabe noch einmal anklicken.
