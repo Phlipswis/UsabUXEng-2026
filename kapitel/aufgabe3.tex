@@ -2,7 +2,7 @@
 %  Aufgabe 3
 % =====================================================================
 \chapter{Usability- und UX-Ziele und geplante Anpassungen}
-\label{chap:formative_evaluation}
+\label{chap:usability/ux-ziele}
 
 \section{Usability/UX-Ziele}
 \label{sec:pt-usability/ux-ziele}
@@ -81,6 +81,7 @@ Neben der tatsächlichen Nachvollziehbarkeit soll untersucht werden, wie einfach
 
 
 \section{Geplante Überprüfung der Usability- und UX-Ziele}
+\label{sec:pt-ueberpruefung}
 
 Zur Überprüfung der drei untergeordneten Usability- und UX-Ziele sind nach der Umsetzung der entsprechenden Anpassungen aufgabenbasierte Usability-Tests mit Studierenden vorgesehen. Dabei sollen unterschiedliche Aspekte der Nutzung untersucht werden: die Geschwindigkeit beim Erkennen dringender Aufgaben, die erfolgreiche Bedienung ohne Vorerfahrung sowie die Nachvollziehbarkeit der gemeinsamen Aufgabenorganisation.
 
@@ -173,16 +174,59 @@ Dabei soll ein Median von mindestens fünf Punkten erreicht werden. Die Kombinat
 
 Da die bisherige formative Evaluation auf einem Interview basiert, sind die abgeleiteten Ziele zunächst als begründete Gestaltungshypothesen zu betrachten. Die geplanten Usability-Tests sollen daher überprüfen, inwieweit die Weiterentwicklung von tick.it die identifizierten Bedürfnisse unterstützt und ob die festgelegten Ziele erreicht werden.
 
+\section{Abgeleitete Issues}
+\label{sec:pt-issues}
+
+\section{Abgeleitete Issues}
+\label{sec:pt-issues}
+
+Aus der formativen Evaluation (vgl. Abschnitt~\ref{chap:formative_evaluation}) und aus eigenen Überlegungen haben wir fünf Issues abgeleitet. Dabei handelt es sich sowohl um Probleme, die im Interview identifiziert wurden, als auch um noch offene Features, die wir umsetzen möchten. Tabelle~\ref{tab:issues} gibt einen Überblick.
+
+\begin{table}[htbp]
+\centering
+\small
+\caption{Abgeleitete Issues, geplante Anpassungen und Priorisierung}
+\label{tab:issues}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabularx}{\textwidth}{@{}l >{\raggedright\arraybackslash}p{3.0cm} >{\raggedright\arraybackslash}p{2.6cm} l >{\raggedright\arraybackslash}X l@{}}
+\toprule
+\textbf{Nr.} & \textbf{Beschreibung} & \textbf{Herkunft} & \textbf{Ziel} & \textbf{Geplante Anpassung(en)} & \textbf{Priorität} \\
+\midrule
+I1 & Aufgaben können nicht priorisiert werden. & Letzte Evaluation (Interview) & UZ1 & Zusätzliches Attribut „Priorität“ je Karte; Filter nach Priorität und Zeit. & hoch \\
+I2 & Keine individuelle Farbgestaltung bzw. Kennzeichnung verschiedener Aufgabenbereiche. & Letzte Evaluation (Interview) & UZ1 (indirekt) & Zusätzliches Attribut „Kategorie“ je Karte und Board; Farbe der Kategorie frei wählbar. & niedrig \\
+I3 & Es kann nur ein Board angelegt werden. & Eigene Überlegung, im Interview bestätigt & UZ1 (indirekt) & Boards-Übersicht zum Anlegen, Umbenennen und Löschen mehrerer Boards; Wechsel zwischen Boards über eine Navigation; jede Karte gehört zu genau einem Board. & mittel \\
+I4 & Optionale Felder bei der Kartenerstellung werden nicht sofort als solche erkannt. & Letzte Evaluation (Interview) & UZ2 & Optionale Felder (z.\,B. Beschreibung) mit dem Zusatz „optional“ beschriften. & hoch \\
+I5 & Keine Kollaboration möglich, Gruppenarbeiten können nicht in tick.it organisiert werden. & Eigene Überlegung, in letzter Evaluation (Interview) bestätigt & UZ3 & ??? & mittel \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Insgesamt ergibt sich ein Schwerpunkt bei der Übersichtlichkeit und Priorisierung (UZ1: I1, I2, I3), ergänzt durch ein Issue zur intuitiven Bedienung (UZ2: I4) und ein Issue zur nachvollziehbaren Zusammenarbeit (UZ3: I5). Die höchste Priorität haben die Priorisierungsfunktion (I1) und die Beschriftung optionaler Felder (I4). Mittlere Priorität haben das Anlegen von mehreren Boards (I3) und die Kollaboration (I5), niedrige Priorität hat die individuelle Farbgestaltung (I2).
+
+\subsection{Begründung der geplanten Anpassungen}
+\label{subsec:issues_begruendung}
+
+\textbf{I1 -- Priorisierung.} Die befragte Person vermisste bei einer zeitnahen Deadline die Möglichkeit, eine Priorität zu vergeben (vgl. Transkript VP01, Z.\,122--124), und nutzt in bisherigen Tools bereits eine Prioritätenansicht (vgl. Z.\,49--50). Ein Prioritätsattribut sowie Filter nach Priorität und Zeit ermöglichen es, dringende Aufgaben ohne aufwendige Suche zu erkennen (UZ1).
+
+\textbf{I2 -- Farbgestaltung.} Im Thema „Individuelle Aufgabenorganisation“ wurde der Wunsch nach Farben für einzelne Module oder private Aufgaben geäußert (vgl. Transkript VP01, Z.\,160--163). Eigene Kategorien mit Farben unterstützen die schnelle Unterscheidung von Aufgabenbereichen und damit UZ1, sind dafür aber nicht zwingend erforderlich.
+
+\textbf{I3 -- Mehrere Boards.} Die Möglichkeit, mehrere Boards anzulegen, wurde als hilfreich eingeschätzt (vgl. Transkript VP01, Z.\,192--193) und war zudem bereits eine eigene Überlegung. Getrennte Boards schaffen mehr Übersicht (UZ1) und bilden außerdem die Grundlage für die Kategorisierung der Boards und die Kollaboration (I5).
+
+\textbf{I4 -- Optionale Felder.} Die Bedienung wurde grundsätzlich als unkompliziert beschrieben (vgl. Transkript VP01, Z.\,143). Es traten aber Unsicherheiten auf, ob das Beschreibungsfeld ausgefüllt werden muss (vgl. Z.\,145--147). Eine Beschriftung optionaler Felder beseitigt diese Unsicherheit mit minimalem Aufwand und erhält die einfache Erlernbarkeit (UZ2), auch für weniger technikaffine Personen.
+
+\textbf{I5 -- Kollaboration.} Im Thema „Kollaborative Aufgabenorganisation“ wurden gemeinsame Boards sowie Unteraufgaben mit Zuständigkeiten und individuellen Deadlines gewünscht (vgl. Transkript VP01, Z.\,164--180). Die bisherige Abstimmung läuft über zusätzliche Kommunikation, etwa per WhatsApp (vgl. Transkript VP01, Z.\,67--73). Gemeinsame Boards mit zugewiesenen Unteraufgaben sollen diesen Aufwand verringern und UZ3 unterstützen.
+
+\subsection{Kriterien der Priorisierung}
+\label{subsec:issues_kriterien}
+
+Wir haben die Issues nach dem Verhältnis von Nutzen für die Nutzenden zu Umsetzungsaufwand priorisiert. Der Nutzen bemisst sich daran, wie stark ein Issue ein Usability- und UX-Ziel unterstützt und wie deutlich es im Interview geäußert wurde. Der Aufwand beschreibt den geschätzten Entwicklungsaufwand. Eine Anpassung erhält hohe Priorität, wenn sie hohen Nutzen bei höchstens mittlerem Aufwand bietet, und niedrige Priorität bei geringem Nutzen. Hoher Aufwand senkt die Priorität, auch wenn der Nutzen hoch ist.
+
+Die Priorisierungsfunktion (I1) wird zuerst umgesetzt, da sie hohen Nutzen für UZ1 bringt, im Interview mehrfach auftauchte und mit mittlerem Aufwand machbar ist. Die Beschriftung optionaler Felder (I4) erhält ebenfalls hohe Priorität, da sie mit sehr geringem Aufwand umsetzbar ist und eine im Interview beobachtete Unsicherheit direkt behebt. Mehrere Boards (I3) haben mittleren Nutzen bei hohem Aufwand und werden deshalb mit mittlerer Priorität eingeordnet. Die Kollaboration (I5) ist für UZ3 zentral, erfordert aber hohen Aufwand und wird deshalb ebenfalls mit mittlerer Priorität eingeordnet. Die Farbgestaltung (I2) ist ein sinnvolles, aber nicht notwendiges Zusatzmerkmal und wird zuletzt umgesetzt.
+
 % ---------------------------------------------------------------------
 \begin{beitraege}
-    Interview Vorbereitung & Tara Dethlefsen \\
-    Interview Durchführung & Philipp Wisser \\
-    Interview Transkription & Philipp Wisser \\
-    Thematische Analyse in MAXQDA & Lara Senger \\
-  Text \cref{sec:pt-einleitung2} und  \cref{sec:pt-vorgehen} & Tara Dethlefsen \\
-  Text \cref{sec:pt-ergebnisse}   & Lara Senger \\
+  Text \cref{sec:pt-usability/ux-ziele} und  \cref{sec:pt-ueberpruefung} & Lara Senger \\
+  Text \cref{sec:pt-issues}   & Tara Dethlefsen \\
   \midrule
   KI/Automatisierung: Claude Sonnet 5.5 zur Überprüfung von Grammatik und Rechtschreibung \parencite{claude2026sonnet}  & Tara Dethlefsen \\
-  KI/Automatisierung: Whisper (Modell medium) zur automatischen Transkription des Interviews \parencite{whisper2025}  & Philipp Wisser \\
-  KI/Automatisierung: Claude Opus 5.5 zur Prüfung der Formvorgaben \parencite{claude2026review} & Philipp Wisser \\
-\end{beitraege}
+  \end{beitraege}
